@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  background-color:white;
+
+}
+.sound{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:rgb(148, 241, 241);
+  margin: 120px 15px;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 4px;
+  color:burlywood;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  
+}
+
+.container {
+  text-align: center;
+}
+
+.btn {
+  padding: 30px 50px;
+  background-color: white;
+  border: none;
+  margin: 10px;
+  font-size: 20px;
+  min-width: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-image: url("images/tom.png");
+  background-size: cover;
+  color:burlywood;
+  font-family: cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  color: rgb(102, 95, 247);
+}
+
+.btn:active {
+  background-size: 105%;
+}
+.mode-dark{
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: 0.4s;
+}
+.input{
+    background-color: blanchedalmond;
+
+}
+.label{
+    width: 80px;
+    height: 40px;
+    background-color:rgb(164, 163, 163);
+    border-radius: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.changemode{
+  font-size: 28px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+  margin-top:  15px;
+  padding: 10px;
+}
+.circle{
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    border-radius: 50%;
+    top: 3px;
+    position: absolute;
+    left: 3px;
+    animation: btnOff 0.4s linar forwards;
+}
+.input:checked + .label{
+    background-color: white;
+}
+
+input:checked + .changemode{
+    color: white;
+}
+.input:checked + .label + .circle{
+    animation: btnOn 0.4s linear forwards;
+    background-color: white;
+}
+
+
+@keyframes btnOn{
+    0%{
+        transform: translateX(0);
+    }100%{
+        transform: translateX(40px);
+    }
+}
+
+@keyframes btnOff{
+    0%{
+        transform: translateX(40px);
+    }100%{
+        transform: translateX(0);
+    } 
+}
